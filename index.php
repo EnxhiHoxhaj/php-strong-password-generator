@@ -1,3 +1,13 @@
+<?php 
+ if(isset($_GET['numero-caratteri']) && !empty($_GET["numero-caratteri"])){
+    $numeroCaratteri = $_GET["numero-caratteri"];
+    var_dump($numeroCaratteri);
+}
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,9 +20,9 @@
         <h1>STRONG PASSWORD GENERATOR</h1>
         <h2>Genera una password sicura</h2>
         <div>Genera una password di lunghezza compresa fra 8 e 32</div>
-        <form action="">
-            <label for="">Lunghezza password: </label>
-            <input type="number"> <br>
+        <form action="index.php">
+            <label for="numero-caratteri">Lunghezza password: </label>
+            <input type="number" name="numero-caratteri"> <br>
             <input type="submit" value="Invia">
             <input type="reset" value="Annulla">
         </form>
