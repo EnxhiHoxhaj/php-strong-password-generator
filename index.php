@@ -1,6 +1,7 @@
 <?php 
 
     $condition= "Genera una password di lunghezza compresa fra 8 e 32";
+    
     // controlliamo se il numero è valido o il parametro è vuoto
  if(isset($_GET['numero-caratteri']) && !empty($_GET["numero-caratteri"])){
     $numeroCaratteri = $_GET["numero-caratteri"];
@@ -17,11 +18,11 @@
             }
             return $passwordGenerata;
         }
-        echo generaPassword($numeroCaratteri);
+       
+        $condition= "la password generata per te é:". " ". generaPassword($numeroCaratteri);
     } else{ 
         // qualora la mia condizione di validità non viene rispaettata mi appare il messaggio di errore
-        $messaggioErrore= "Il numero selezionato non è valido: devi indicare un numero copreso tra 8 e 32";
-        $condition= $messaggioErrore;
+        $condition= "Il numero selezionato non è valido: devi indicare un numero copreso tra 8 e 32";
         // echo $messaggioErrore;
     }
 }
