@@ -12,7 +12,9 @@
         <div>Genera una password di lunghezza compresa fra 8 e 32</div>
         <form action="">
             <label for="">Lunghezza password: </label>
-            <input type="number">
+            <input type="number"> <br>
+            <input type="submit" value="Invia">
+            <input type="reset" value="Annulla">
         </form>
     </div>
     
