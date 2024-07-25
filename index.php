@@ -47,7 +47,9 @@
             <label for="numero-caratteri">Lunghezza password: </label>
             <input type="number" name="numero-caratteri"> <br>
             <input type="submit" value="Invia">
-            <input type="reset" value="Annulla">
+            <button>
+                <a href="index.php">Annulla</a>
+            </button>
         </form>
     </div>
     
