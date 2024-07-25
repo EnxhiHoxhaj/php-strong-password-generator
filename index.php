@@ -1,7 +1,17 @@
 <?php 
+
+    // controlliamo se il numero è valido o il parametro è vuoto
  if(isset($_GET['numero-caratteri']) && !empty($_GET["numero-caratteri"])){
     $numeroCaratteri = $_GET["numero-caratteri"];
-    var_dump($numeroCaratteri);
+    // var_dump($numeroCaratteri);
+    // imposto la condizione di validità del numero inserito
+    if ($numeroCaratteri >= 8 && $numeroCaratteri <= 32) {
+        var_dump($numeroCaratteri);
+    } else{ 
+        // qualora la mia condizione di validità non viene rispaettata mi appare il messaggio di errore
+        $messaggioErrore= "Il numero selezionato non è valido: devi indicare un numero copreso tra 8 e 32";
+        echo $messaggioErrore;
+    }
 }
 
 
