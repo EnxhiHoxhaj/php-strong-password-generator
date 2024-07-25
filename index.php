@@ -10,17 +10,6 @@
     // var_dump($numeroCaratteri);
     // imposto la condizione di validità del numero inserito
     if ($numeroCaratteri >= 8 && $numeroCaratteri <= 32) {
-        // var_dump($numeroCaratteri);
-        // function generaPassword($numeroCaratteri){
-        //     $caratteri = "aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ0123456789,;.:-_ò@çà°#ù§[]{}()!£$%&/=?^*";
-        //     $passwordGenerata='';
-        //     for($i = 0; $i< $numeroCaratteri; $i++){
-        //         $random= rand(0, strlen($caratteri));
-        //         $passwordGenerata .= $caratteri[$random];
-        //     }
-        //     return $passwordGenerata;
-        // }
-       
         $condition= "la password generata per te é:". " ". generaPassword($numeroCaratteri);
     } else{ 
         // qualora la mia condizione di validità non viene rispaettata mi appare il messaggio di errore
