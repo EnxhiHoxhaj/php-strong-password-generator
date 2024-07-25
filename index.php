@@ -1,5 +1,7 @@
 <?php 
 
+    include './functions.php';
+
     $condition= "Genera una password di lunghezza compresa fra 8 e 32";
     
     // controlliamo se il numero è valido o il parametro è vuoto
@@ -9,15 +11,15 @@
     // imposto la condizione di validità del numero inserito
     if ($numeroCaratteri >= 8 && $numeroCaratteri <= 32) {
         // var_dump($numeroCaratteri);
-        function generaPassword($numeroCaratteri){
-            $caratteri = "aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ0123456789,;.:-_ò@çà°#ù§[]{}()!£$%&/=?^*";
-            $passwordGenerata='';
-            for($i = 0; $i< $numeroCaratteri; $i++){
-                $random= rand(0, strlen($caratteri));
-                $passwordGenerata .= $caratteri[$random];
-            }
-            return $passwordGenerata;
-        }
+        // function generaPassword($numeroCaratteri){
+        //     $caratteri = "aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ0123456789,;.:-_ò@çà°#ù§[]{}()!£$%&/=?^*";
+        //     $passwordGenerata='';
+        //     for($i = 0; $i< $numeroCaratteri; $i++){
+        //         $random= rand(0, strlen($caratteri));
+        //         $passwordGenerata .= $caratteri[$random];
+        //     }
+        //     return $passwordGenerata;
+        // }
        
         $condition= "la password generata per te é:". " ". generaPassword($numeroCaratteri);
     } else{ 
@@ -46,9 +48,9 @@
         <form action="index.php">
             <label for="numero-caratteri">Lunghezza password: </label>
             <input type="number" name="numero-caratteri"> <br>
-            <input type="submit" value="Invia">
+            <input type="submit" value="Genera">
             <button>
-                <a href="index.php">Annulla</a>
+                <a href="index.php">Reset</a>
             </button>
         </form>
     </div>
